@@ -11,6 +11,10 @@ import { TweetsPage } from '../tweets/tweets';
 export class HomePage {
   public params: any;
   public pages: Array<{title: string, link: any}>;
+  public isSuccess: boolean;
+  public isError: boolean;
+  public isWarning: boolean;
+  public canProceed: boolean;
 
   constructor(public navCtrl: NavController) {
     // this.params = {
@@ -18,6 +22,10 @@ export class HomePage {
     //   name: "Sample App",
     //   description: "A sample application for helping to learn Iconi 2"
     // }
+    this.isSuccess = true;
+    this.isError = false;
+    this.isWarning = false;
+    this.canProceed = true;
 
     this.pages = [
       {
@@ -33,6 +41,16 @@ export class HomePage {
         link: TweetsPage
       }
     ];
+  }
+
+  elementClasses() {
+    let classes = {
+      isSuccess: this.isSuccess,
+      isError: this.isError,
+      isWarning: this.isWarning,
+      canProceed: this.canProceed
+    };
+    return classes;
   }
 
   // setNavigationLink() {

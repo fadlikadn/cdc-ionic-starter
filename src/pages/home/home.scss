@@ -1,3 +1,14 @@
 page-home {
-
+    .isSuccess {
+        color: #1E88E5 !important;
+    }
+    .isError {
+        color: #D43669 !important;
+    }
+    .isWarning {
+        color: #D4D34F !important;
+    }
+    .canProceed {
+        background-color: #DEEAE8;
+    }
 }
