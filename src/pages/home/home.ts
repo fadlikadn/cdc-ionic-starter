@@ -66,7 +66,15 @@ export class HomePage {
 
   setNavigationLink(page) {
     console.log(page);
-    this.navCtrl.push(page.link);
+    this.navCtrl.push(page);
+  }
+
+  buttonOne(page) {
+    console.log(`I could do a lot more than just print out this message for the ${page} page to the browser console`);
+  }
+
+  buttonTwo(page) {
+    console.log(`Yep, I'm an under-performer for the ${page} page too. :(`);
   }
 
 }

@@ -13,13 +13,25 @@
         If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
     </p>
     <ion-list>
-        <ion-item *ngFor="let page of pages" (click)="setNavigationLink(page)">
-            <!--[ngClass]="elementClasses()"-->
-            <ion-avatar item-left>
-                <img src="{{ page.thumb }}">
-            </ion-avatar>
-            <h2>{{ page.title }}</h2>
-            <p [innerHTML]="page.description"></p>
-        </ion-item>
+        <ion-item-sliding *ngFor="let page of pages">
+            <ion-item (click)="setNavigationLink(page.link)">
+                <!--[ngClass]="elementClasses()"-->
+                <ion-avatar item-left>
+                    <img src="{{ page.thumb }}">
+                </ion-avatar>
+                <h2>{{ page.title }}</h2>
+                <p [innerHTML]="page.description"></p>
+            </ion-item>
+            <ion-item-options side="right">
+                <button ion-button color="primary" (click)="buttonOne(page.title)">
+                  <ion-icon name="text"></ion-icon>
+                  BUTTON 1
+                </button>
+                <button ion-button color="secondary" (click)="buttonTwo(page.title)">
+                  <ion-icon name="call"></ion-icon>
+                  BUTTON 2
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
     </ion-list>
 </ion-content>
