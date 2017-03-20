@@ -10,7 +10,7 @@ import { TweetsPage } from '../tweets/tweets';
 })
 export class HomePage {
   public params: any;
-  public pages: Array<{title: string, link: any}>;
+  public pages: Array<{title: string, thumb: string, description: string, link: any}>;
   public isSuccess: boolean;
   public isError: boolean;
   public isWarning: boolean;
@@ -30,14 +30,20 @@ export class HomePage {
     this.pages = [
       {
         title: 'About',
+        thumb: 'assets/images/about.png',
+        description: 'Who we are. What we do. Why we&rsquo;re here',
         link: AboutPage
       },
       {
         title: 'Contact Us',
+        thumb: 'assets/images/contact.png',
+        description: 'Drop us a line and get in touch we&rsquo;d love to hear from you!',
         link: ContactPage
       },
       {
         title: 'Tweets',
+        thumb: 'assets/images/tweet.png',
+        description: 'The latest news updates from our Twitter account',
         link: TweetsPage
       }
     ];
