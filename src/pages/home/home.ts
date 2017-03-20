@@ -4,6 +4,8 @@ import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { TweetsPage } from '../tweets/tweets';
 
+import { TechnologiesPage } from '../technologies/technologies';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -45,7 +47,13 @@ export class HomePage {
         thumb: 'assets/images/tweet.png',
         description: 'The latest news updates from our Twitter account',
         link: TweetsPage
-      }
+      },
+      {
+        title: 'Technologies',
+        thumb: 'assets/images/tweet.png',
+        description: 'The latest news updates from our Twitter account',
+        link: TechnologiesPage
+      },
     ];
   }
 

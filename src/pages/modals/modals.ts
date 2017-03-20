@@ -1,0 +1,36 @@
+import { Component } from '@angular/core';
+import { NavController, ViewController, NavParams } from 'ionic-angular';
+
+/*
+  Generated class for the Modals page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+*/
+@Component({
+  selector: 'page-modals',
+  templateUrl: 'modals.html'
+})
+export class Modals {
+  public name: string;
+  public summary: string;
+  public website: string;
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public viewCtrl: ViewController) {
+      this.name = this.navParams.get('name');
+      this.summary  = this.navParams.get('summary');
+      this.website = this.navParams.get('website');
+  }
+
+  closeModal() {
+    this.viewCtrl.dismiss();
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ModalsPage');
+  }
+
+}

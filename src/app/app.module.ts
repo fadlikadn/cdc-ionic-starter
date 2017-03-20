@@ -4,7 +4,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
+import { TechnologiesPage } from '../pages/technologies/technologies';
 import { TweetsPage } from '../pages/tweets/tweets';
+import { Modals } from '../pages/modals/modals';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { TweetsPage } from '../pages/tweets/tweets';
     AboutPage,
     ContactPage,
     TweetsPage,
+    TechnologiesPage,
+    Modals,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -24,6 +28,8 @@ import { TweetsPage } from '../pages/tweets/tweets';
     AboutPage,
     ContactPage,
     TweetsPage,
+    TechnologiesPage,
+    Modals
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
