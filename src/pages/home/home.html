@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Ionic Blank
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    The world is your oyster.
+    <span (click)="setNavigationLink()">Why not explore it?</span>
+    <p>
+        If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+    </p>
+    <ion-list>
+        <ion-item *ngFor="let page of pages" (click)="setNavigationLink(page)">
+            {{ page.title }}
+        </ion-item>
+    </ion-list>
+</ion-content>
