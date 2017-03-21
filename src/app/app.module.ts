@@ -19,7 +19,27 @@ import { Modals } from '../pages/modals/modals';
     Modals,
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      platforms: {
+        android: {
+          backButtonText: "",
+          backButtonIcon: "md-arrow-back",
+          iconMode: "md",
+          modalEnter: "modal-md-slide-in",
+          modalLeave: "modal-md-slider-out",
+          pageTransition: "md",
+        },
+        ios: {
+          backButtonText: "Previous",
+          backButtonIcon: "ios-arrow-back",
+          iconMode: "ios",
+          modalEnter: "modal-ios-slide-in",
+          modalLeave: "modal-ios-slider-out",
+          pageTransition: "ios",
+        }
+      }
+          
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
