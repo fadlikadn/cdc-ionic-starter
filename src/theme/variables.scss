@@ -2,7 +2,7 @@
 // http://ionicframework.com/docs/v2/theming/
 $font-path: "../assets/fonts";
 @import "ionic.globals";
-// @import "ionic.build.dark";
+@import "ionic.build.dark";
 // Shared Variables
 // --------------------------------------------------
 // To customize the look and feel of this app, you can override
@@ -18,11 +18,11 @@ $font-path: "../assets/fonts";
 // The "primary" color is the only required color in the map.
 $colors: ( primary: #387ef5, secondary: #32db64, danger: #f53d3d, light: #f4f4f4, dark: #222, twitter: ( base: #55acee, contrast: #ffffff), facebook: (base: #38669f, contrast: #ffffff));
 // overriding Sass variables
-$text-color: #686868;
-$font-size-base: 1.6rem;
-$list-ios-background-color: #ffffff;
-$list-md-background-color: #ffffff;
-$list-wp-background-color: #ffffff;
+// $text-color: #686868;
+// $font-size-base: 1.6rem;
+// $list-ios-background-color: #ffffff;
+// $list-md-background-color: #ffffff;
+// $list-wp-background-color: #ffffff;
 // custom Sass variables
 $my-padding: 20px;
 $padding: $my-padding;
